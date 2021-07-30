@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
-  "author": "",
+  "author": "Moaksh Kakkar",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "mongoose": "^5.9.1",
+    "mongoose": "^5.13.5",
     "shortid": "^2.2.15"
   },
   "devDependencies": {
