@@ -2,11 +2,14 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const ShortUrl = require('./models/shortUrl')
+const product = require('./api/product')
 const app = express()
 
 mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true, useUnifiedTopology: true
 })
+
+app.use("/api/product", product)
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
