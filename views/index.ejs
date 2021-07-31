@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
-
+  <link rel="icon" href="logo.png" type="image/x-icon">
   <title>URL Shrinker</title>
 </head>
 
@@ -29,7 +28,7 @@
         <tr class="text-gray-500">
           <th>Full URL</th>
           <th>Short URL</th>
-          <th>Clicks</th>
+          <th>Copy from here</th>
         </tr>
       </thead>
       <tbody>
@@ -41,8 +40,8 @@
             <td><a href="<%= shortUrl.short %>">
                 <%= shortUrl.short %>
               </a></td>
-            <td>
-              <%= shortUrl.clicks %>
+            <td class="select-all">
+              https://vortex-url-shorten.herokuapp.com/<%= shortUrl.short %>
             </td>
           </tr>
           <% }) %>
